@@ -1,0 +1,7 @@
+timestamp,pad_id,well_id,event_type,value,unit,source
+2026-10-30T06:00:00Z,PAD-A,W-101,plunger_launch,1,count,synthetic
+2026-10-30T09:30:00Z,PAD-A,W-103,plunger_launch,1,count,synthetic
+2026-10-30T13:15:00Z,PAD-A,W-102,plunger_receipt,1,count,synthetic
+2026-10-30T15:40:00Z,PAD-A,W-104,plunger_launch,1,count,synthetic
+2026-10-30T18:00:00Z,PAD-A,TANK-01,level,62,percent,synthetic
+2026-10-31T06:00:00Z,PAD-A,TANK-01,level_forecast,71,percent,synthetic
