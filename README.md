@@ -6,4 +6,4 @@ This codebase includes web scraping code to pull information from a job site and
 
 ## Electio liquid movement demo
 
-The `electio-demo/` directory contains a standalone browser demo created for a conversation with Electio. It uses synthetic events and tank values to illustrate liquid arrival forecasting and operator review. Open `electio-demo/index.html` directly; no install or server is required. The demo does not connect to real wells or control equipment.
+A standalone browser demonstration is available in [`electio-demo/`](electio-demo/). It uses synthetic events and tank values to illustrate liquid arrival forecasting and operator review. Open `electio-demo/index.html` directly; no installation or server is required. It does not connect to real wells or control equipment.
