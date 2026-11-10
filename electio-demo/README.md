@@ -7,6 +7,7 @@ A static, browser-based discussion demo that follows the attached tank and full-
 - An animated tank cross-section with synthetic inflow and drain cues.
 - A 24-hour tank-level preview driven by the visible volume balance and synthetic pig-arrival profile.
 - Scenario and initial-level controls.
+- A sample event file where a pipeline pig is launched at a launcher and later recorded at its receiver; each receipt has a fictional liquid volume.
 - A flow diagram that connects field observations, events, arrival estimates, tank inputs, and an OpenReynolds case.
 - A dimensioned case prompt for an OpenReynolds/OpenFOAM free-surface study.
 - A CSV importer for solver exports with numeric `time_s,level_pct` columns.
