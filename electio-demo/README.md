@@ -21,3 +21,13 @@ The OpenReynolds prompt is in [`openreynolds-case-prompt.md`](openreynolds-case-
 ## Reference
 
 - [OpenReynolds source and documentation](https://github.com/InviscidAI/OpenReynolds)
+
+## Wellsite drone economics sandbox
+
+The page now includes a synthetic stripper-well scenario showing how drone inspections can extend the operating picture when paired with SCADA, production, inventory, logistics, and market data. Drones provide periodic/on-demand visual context; SCADA remains the continuous process signal. Recommendations feed an operator-approved dispatch, repair, or production/marketing action.
+
+The default 20-well illustration assumes 8 bopd per well; four issues identified early each month; 1.5 days of downtime avoided per issue; six avoided truck rolls at $450 each; 40% of baseline monthly volume responsive to sales timing at a $1.50/bbl uplift; $70/bbl value for recovered production; and two drone sorties/month at $600 each. At those assumptions, it models 48 bbl/month of recovered production (+1%), $2,700/month in truck costs avoided, $2,880/month in netback uplift, and $1,200/month in patrol costs. The resulting $7,740/month illustrative opportunity ($92,880/year) is before royalties, taxes, variable production costs, and any unmodeled program costs.
+
+These are editable synthetic assumptions, not observed performance, vendor pricing, reserves, a production forecast, or a guaranteed financial result. The netback example assumes inventory, nominations, transport capacity, and buyer/price signals are connected and operational actions are approved. It does not imply a drone alone can change realized prices.
+
+See [`wellsite-synthetic-scenario.csv`](wellsite-synthetic-scenario.csv) for the default inputs and calculation formulas, and [`drones-stripper-wells-summary.pdf`](drones-stripper-wells-summary.pdf) for the short first-principles summary deck.

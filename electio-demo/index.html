@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Liquid Slug Optimization | Electio demo</title>
+<title>Electio | Wellsite Visibility Demo</title>
 <style>
 :root{--ink:#142338;--muted:#64748b;--line:#dce4ec;--bg:#f4f7fa;--green:#3fc66b;--purple:#7950f2;--yellow:#f3c62f;--blue:#62b7f1;--red:#db625a;--pale-green:#e5f8eb;--pale-purple:#efe9ff;--pale-yellow:#fff4c7}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:var(--ink)}.wrap{max-width:1380px;margin:auto;padding:28px 34px 44px}.top{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;margin-bottom:22px}.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:800}.title{font-size:30px;letter-spacing:-.035em;margin:6px 0}.sub{color:var(--muted);max-width:780px}.badge{flex:0 0 auto;border:1px solid #ead887;background:#fff8d9;color:#765d0b;border-radius:999px;padding:7px 12px;font-size:11px;font-weight:750}.badge.live{background:#e8f7ed;border-color:#b8e7c5;color:#176b35}.grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,.8fr);gap:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:19px 21px;box-shadow:0 5px 18px #1a355408}.panel h2{font-size:16px;margin:0}.hint{font-size:12px;color:var(--muted);margin:2px 0 14px}.tank-svg{display:block;width:100%;height:auto;min-height:240px;background:linear-gradient(180deg,#fbfdff,#f4f8fb);border:1px solid #e8edf2;border-radius:10px}.tank-svg text{font-family:inherit;fill:var(--ink)}.tank-svg .muted{fill:var(--muted)}.tank-water{fill:url(#waterFill);transition:y .35s,height .35s}.waterline{stroke:#2984bf;stroke-width:3}.flow-dash{stroke:#268cc8;stroke-width:4;stroke-dasharray:10 8;animation:flow 1.2s linear infinite}.drain-dash{stroke:#7950f2;stroke-width:4;stroke-dasharray:10 8;animation:flow 1.4s linear infinite}.wave{fill:none;stroke:#d7f0ff;stroke-width:3;opacity:.85;animation:wave 2.8s ease-in-out infinite alternate}@keyframes flow{to{stroke-dashoffset:-36}}@keyframes wave{to{transform:translateX(13px)}}.controls{display:grid;gap:12px;margin-top:15px}.control{display:grid;grid-template-columns:140px 1fr 72px;gap:12px;align-items:center;font-size:12px}.control select,.control input{width:100%;accent-color:var(--purple)}select{border:1px solid var(--line);border-radius:7px;padding:7px;background:#fff;color:var(--ink)}input[type=range]{padding:0}.value{font-weight:750;text-align:right;font-variant-numeric:tabular-nums}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}.metric{background:#f7f9fb;border-radius:9px;padding:10px 11px}.metric span{display:block;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metric strong{font-size:17px;font-variant-numeric:tabular-nums}.note{font-size:11px;color:var(--muted);line-height:1.5}.alert{padding:10px 12px;background:#fff4e4;color:#80520d;border-radius:8px;font-size:12px}.alert.high{background:#fff0ed;color:#963f37}.chart{width:100%;height:auto;display:block}.chart text{font:10px system-ui;fill:#718096}.chart .gridline{stroke:#e3e9ef;stroke-width:1}.chart .threshold{stroke:#cf9b24;stroke-dasharray:5 4}.chart .series{fill:none;stroke:#8052f2;stroke-width:3}.chart .area{fill:#eee9ff;opacity:.85}.section{margin-top:18px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:12px}.section-head h2{margin:0;font-size:17px}.section-head p{margin:0;color:var(--muted);font-size:12px}.pipeline{display:grid;grid-template-columns:1fr 38px 1fr 38px 1fr 38px 1fr 38px 1fr;align-items:stretch;gap:4px}.node{border-radius:10px;padding:13px 14px;min-height:104px;border:1px solid transparent}.node small{font-size:9px;letter-spacing:.08em;text-transform:uppercase;font-weight:800}.node strong{display:block;font-size:13px;line-height:1.3;margin-top:5px}.node p{font-size:11px;color:#526275;margin:5px 0 0}.data{background:var(--pale-green);border-color:#c5e9ce}.manual{background:var(--pale-yellow);border-color:#f0df9b}.model{background:var(--pale-purple);border-color:#d9ccff}.node.data small{color:#27994a}.node.manual small{color:#9a7800}.node.model small{color:#6740d1}.arrow{align-self:center;text-align:center;font-size:23px;color:#8897a7}.feedback{border-top:2px dashed #202b37;margin:12px 15% 0 17%;padding-top:8px;text-align:center;color:var(--muted);font-size:11px}.bottom-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:18px}.setup{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}.setup-list{display:grid;grid-template-columns:1fr 1fr;gap:9px 14px}.setup-item{font-size:12px}.setup-item b{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.06em}.button{border:0;border-radius:8px;padding:9px 13px;background:var(--ink);color:#fff;cursor:pointer;font-weight:700;font-size:12px}.button:hover{filter:brightness(1.14)}.button.secondary{background:#edf1f5;color:var(--ink)}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.link{color:#5436c5;font-size:12px;font-weight:700;text-decoration:none}.link:hover{text-decoration:underline}.foot{font-size:11px;color:var(--muted);margin-top:18px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.econ{margin:0 0 18px}.econ-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}.econ-head h2{margin:0;font-size:18px}.econ-head p{color:var(--muted);font-size:12px;margin:3px 0 12px}.synthetic-tag{font-size:10px;font-weight:800;letter-spacing:.07em;color:#775d0b;background:#fff5cc;padding:6px 9px;border-radius:999px;white-space:nowrap}.econ-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.econ-controls{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}.econ-controls label{font-size:11px;color:var(--muted);display:grid;grid-template-columns:1fr auto;gap:5px;align-items:center}.econ-controls input{grid-column:1/-1;width:100%;accent-color:var(--purple)}.econ-controls b{font-size:12px;color:var(--ink);font-variant-numeric:tabular-nums}.econ-output{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.econ-metric{background:#f7f9fb;border-radius:9px;padding:10px}.econ-metric span{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}.econ-metric strong{font-size:17px;font-variant-numeric:tabular-nums}.econ-total{background:var(--ink);color:white;border-radius:10px;padding:12px 14px;margin-top:9px;display:flex;justify-content:space-between;align-items:center;gap:8px}.econ-total span{font-size:11px}.econ-total strong{font-size:20px;font-variant-numeric:tabular-nums}.econ-foot{font-size:10px;color:var(--muted);margin:10px 0 0}.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.how-list{margin:9px 0 0;padding-left:19px;font-size:12px;color:#526275}.how-list li{margin:5px 0}.response{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}.response span{font-size:10px;font-weight:700;background:#f0f3f7;border-radius:6px;padding:6px 8px}.response i{font-style:normal;color:#8190a1}.rule-note{background:#fff7dc;border:1px solid #f0dfa2;border-radius:8px;padding:9px 10px;font-size:11px;color:#715c19;margin-top:10px}
+@media(max-width:850px){.econ-grid,.how-grid{grid-template-columns:1fr}.econ-output{grid-template-columns:1fr 1fr}}
+
 @media(max-width:1050px){.pipeline{grid-template-columns:1fr}.pipeline .arrow{transform:rotate(90deg);height:20px}.bottom-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.wrap{padding:18px}.top{display:block}.badge{display:inline-block;margin-top:12px}.grid{grid-template-columns:1fr}.pipeline{grid-template-columns:1fr}.arrow{transform:rotate(90deg);height:22px}.feedback{margin:12px 0 0}.control{grid-template-columns:110px 1fr 55px}.setup{grid-template-columns:1fr}.setup-list{grid-template-columns:1fr 1fr}}
 </style>
@@ -13,12 +17,47 @@
 <body>
 <main class="wrap">
 <header class="top">
-  <div><div class="eyebrow">Electio · liquid slug optimization</div><h1 class="title">See the tank response before the next run</h1><p class="sub">A visual sample of the full-system idea in your reference: event history feeds a forecast, then a tank model estimates the level response. The live preview below is a synthetic mass balance; an OpenReynolds CFD case prompt is included for a solver-backed follow-up.</p></div>
-  <span class="badge" id="runBadge">SYNTHETIC PREVIEW · CFD NOT RUN</span>
+  <div><div class="eyebrow">Electio · wellsite visibility</div><h1 class="title">Connect field visibility to better wellsite decisions</h1><p class="sub">Drones extend the control platform with fresh visual context on low-output and hard-to-reach assets. Combine patrol observations with continuous SCADA, production, inventory, and market signals to prioritize an operator-approved response.</p></div>
+  <span class="badge" id="runBadge">SYNTHETIC WELLCASE · NO LIVE TELEMETRY</span>
 </header>
+<section class="panel econ">
+  <div class="econ-head"><div><h2>Illustrative economics for 20 stripper wells</h2><p>First-principles scenario · 30-day month · adjust assumptions below</p></div><span class="synthetic-tag">SYNTHETIC · NOT FIELD PERFORMANCE</span> <a class="link" href="drones-stripper-wells-summary.pdf" target="_blank" rel="noreferrer">Summary deck ↗</a></div>
+  <div class="econ-grid">
+    <div class="econ-controls">
+      <label>Wells in pilot <b id="wellCountValue">20</b><input id="wellCount" type="range" min="5" max="100" step="5" value="20"></label>
+      <label>Average oil rate per well <b id="oilRateValue">8 bopd</b><input id="oilRate" type="range" min="2" max="20" step="1" value="8"></label>
+      <label>Early-found events / month <b id="eventsValue">4</b><input id="events" type="range" min="0" max="20" step="1" value="4"></label>
+      <label>Downtime avoided per event <b id="downtimeValue">1.5 days</b><input id="downtime" type="range" min="0.5" max="5" step="0.5" value="1.5"></label>
+      <label>Truck rolls avoided / month <b id="rollsValue">6</b><input id="rolls" type="range" min="0" max="30" step="1" value="6"></label>
+      <label>Cost per truck roll <b id="rollCostValue">$450</b><input id="rollCost" type="range" min="100" max="1500" step="50" value="450"></label>
+      <label>Volume sold in flexible window <b id="flexShareValue">40%</b><input id="flexShare" type="range" min="0" max="100" step="5" value="40"></label>
+      <label>Illustrative netback uplift <b id="upliftValue">$1.50/bbl</b><input id="uplift" type="range" min="0" max="10" step="0.25" value="1.5"></label>
+      <label>Drone patrol sorties / month <b id="patrolsValue">2</b><input id="patrols" type="range" min="0" max="12" step="1" value="2"></label>
+      <label>Cost per drone sortie <b id="flightCostValue">$600</b><input id="flightCost" type="range" min="100" max="3000" step="100" value="600"></label>
+    </div>
+    <div>
+      <div class="econ-output">
+        <div class="econ-metric"><span>Recovered production</span><strong id="prodValue">48 bbl/mo</strong></div>
+        <div class="econ-metric"><span>Truck cost avoided</span><strong id="costValue">$2,700/mo</strong></div>
+        <div class="econ-metric"><span>Netback uplift</span><strong id="netbackValue">$2,880/mo</strong></div>
+        <div class="econ-metric"><span>Drone patrol cost</span><strong id="droneCostValue">$1,200/mo</strong></div>
+      </div>
+      <div class="econ-total"><span>Net illustrative opportunity after drone patrol cost · before royalties, taxes, and variable production cost</span><strong id="netValue">$7,740/mo</strong></div>
+      <p class="econ-foot">Gross modeled value is $8,940/mo ($107,280/year) at $70/bbl recovered production. After $1,200/mo of assumed drone patrol cost, net is $7,740/mo ($92,880/year). Math: recovered bbl = events × avoided downtime × bopd; truck savings = avoided rolls × cost/roll; netback gain = baseline bbl × flexible share × uplift/bbl. Synthetic inputs only; no benefits are guaranteed.</p>
+    </div>
+  </div>
+</section>
+<section class="panel section">
+  <div class="section-head"><div><h2>How drones fit into the control loop</h2><p>Drones add visual awareness; continuous telemetry and human approval keep the operating loop grounded.</p></div></div>
+  <div class="how-grid">
+    <div><strong>First-principles operating logic</strong><ul class="how-list"><li>Locate high-cost, low-rate, or hard-to-reach assets where a missed issue has material impact.</li><li>Use RGB / thermal patrols to flag visible leaks, abnormal heat, flare changes, or damaged equipment.</li><li>Join each observation to asset identity, SCADA alarms, production history, tank / inventory state, and work history.</li><li>Rank by expected lost barrels, safety / environmental severity, confidence, and response cost.</li></ul></div>
+    <div><strong>Demand-aware action</strong><ul class="how-list"><li>Pair field context with current nominations, transport capacity, inventory, and buyer / price signals.</li><li>When demand or logistics shift, recompute the preferred production, storage, and dispatch action within operating constraints.</li><li>Route recommended work to the operator; record approval, action, verified outcome, and realized netback.</li></ul><div class="response"><span>Drone + SCADA</span><i>→</i><span>Asset event</span><i>→</i><span>Rank</span><i>→</i><span>Operator decision</span><i>→</i><span>Dispatch / repair</span></div></div>
+  </div>
+  <div class="rule-note"><b>Operating boundary:</b> Drones provide periodic or on-demand inspection imagery, not continuous process control. Real-time market response depends on connected production / inventory / nomination data and approved operating actions.</div>
+</section>
 <div class="grid">
 <section class="panel">
-  <h2>Physical model</h2><div class="hint">Rectangular tank · inflow pulses · controlled drain · level checked against an 80% review line</div>
+  <h2>Liquid handling model</h2><div class="hint">Tank balance is a supporting physical example for storage and dispatch decisions · synthetic inputs</div>
   <svg class="tank-svg" viewBox="0 0 760 340" role="img" aria-label="Synthetic liquid tank with inflow and drain">
     <defs><linearGradient id="waterFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#82cdf5"/><stop offset="1" stop-color="#55aee5"/></linearGradient><marker id="arrBlue" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#268cc8"/></marker><marker id="arrPurple" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#7950f2"/></marker></defs>
     <text x="36" y="44" font-size="12" font-weight="700" class="muted">INLET · SYNTHETIC ARRIVAL PROFILE</text>
@@ -56,7 +95,7 @@
 </aside>
 </div>
 <section class="panel section">
-  <div class="section-head"><div><h2>Full system</h2><p>Every stage links field evidence to a checkable outcome.</p></div><div><a class="link" href="https://app.tryreynolds.com" target="_blank" rel="noreferrer">Open hosted app ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/InviscidAI/OpenReynolds" target="_blank" rel="noreferrer">Source ↗</a></div></div>
+  <div class="section-head"><div><h2>Data path from wellsite to response</h2><p>Each recommendation links observed conditions to a measurable operating outcome.</p></div><div><a class="link" href="https://app.tryreynolds.com" target="_blank" rel="noreferrer">Open hosted app ↗</a> &nbsp;·&nbsp; <a class="link" href="https://github.com/InviscidAI/OpenReynolds" target="_blank" rel="noreferrer">Source ↗</a></div></div>
   <div class="pipeline">
     <div class="node data"><small>Observed data</small><strong>Features + tank history</strong><p>Level, equipment, route, operating context</p></div><div class="arrow" aria-hidden="true">→</div>
     <div class="node data"><small>Field events</small><strong>Pig launches + receipts</strong><p>Pipeline launch/receiver events; fictional liquid volumes</p></div><div class="arrow" aria-hidden="true">→</div>
@@ -79,7 +118,7 @@
   <p class="note">The OpenReynolds run prompt asks the agent to report mesh checks, convergence, mass balance and liquid level over time. Only an imported solver export is shown as solver output.</p>
 </section>
 </div>
-<p class="foot">Illustrative example built from synthetic data. No well, operator, site, telemetry, CFD output, or production result is represented. The OpenReynolds agent can build and run OpenFOAM cases; the page’s default chart uses the simple balance formula above.</p>
+<p class="foot">All wellsite and economic inputs are synthetic; no named well, operator, site, drone flight, telemetry, CFD output, or production result is represented. The tank chart remains a synthetic balance preview, not a CFD result or operating forecast.</p>
 </main>
 <script>
 const CAPACITY=2000;
@@ -137,6 +176,30 @@ $('resultFile').addEventListener('change',event=>{
  };
  reader.readAsText(file);
 });
+
+const econIds=['wellCount','oilRate','events','downtime','rolls','rollCost','flexShare','uplift','patrols','flightCost'];
+function renderEconomics(){
+ const v=Object.fromEntries(econIds.map(id=>[id,Number($(id).value)]));
+ $('wellCountValue').textContent=String(v.wellCount);$('oilRateValue').textContent=`${v.oilRate} bopd`;
+ $('eventsValue').textContent=String(v.events);$('downtimeValue').textContent=`${v.downtime.toFixed(1)} days`;
+ $('rollsValue').textContent=String(v.rolls);$('rollCostValue').textContent=`$${v.rollCost.toLocaleString()}`;
+ $('flexShareValue').textContent=`${v.flexShare}%`;$('upliftValue').textContent=`$${v.uplift.toFixed(2)}/bbl`;
+ $('patrolsValue').textContent=String(v.patrols);$('flightCostValue').textContent=`$${v.flightCost.toLocaleString()}`;
+ const recovered=v.events*v.downtime*v.oilRate;
+ const avoided=v.rolls*v.rollCost;
+ const netback=v.wellCount*v.oilRate*30*(v.flexShare/100)*v.uplift;
+ const total=recovered*70+avoided+netback;
+ const droneCost=v.patrols*v.flightCost,net=total-droneCost;
+ const baseline=v.wellCount*v.oilRate*30;
+ $('prodValue').textContent=`${Math.round(recovered).toLocaleString()} bbl/mo (+${baseline?((recovered/baseline)*100).toFixed(1):'0.0'}%)`;
+ $('costValue').textContent=`$${Math.round(avoided).toLocaleString()}/mo`;
+ $('netbackValue').textContent=`$${Math.round(netback).toLocaleString()}/mo`;
+ $('droneCostValue').textContent=`$${Math.round(droneCost).toLocaleString()}/mo`;
+ $('netValue').textContent=`$${Math.round(net).toLocaleString()}/mo`; 
+}
+econIds.forEach(id=>$(id).addEventListener('input',renderEconomics));
+renderEconomics();
+
 render();
 </script>
 </body>

@@ -1,0 +1,21 @@
+metric,value,unit,formula_or_assumption,status
+wells,20,wells,Illustrative pilot size,Synthetic
+average_oil_rate,8,bopd_per_well,Illustrative steady average,Synthetic
+baseline_monthly_oil,4800,bbl_per_month,wells*average_oil_rate*30,Synthetic
+issues_found_early,4,events_per_month,Illustrative early findings,Synthetic
+avoided_downtime,1.5,days_per_event,Illustrative response advantage,Synthetic
+recovered_production,48,bbl_per_month,events*avoided_downtime*average_oil_rate,Synthetic
+recovered_production_uplift,1.0,percent_of_baseline,recovered_production/baseline_monthly_oil*100,Synthetic
+recovered_oil_value,3360,USD_per_month,recovered_production*70_USD_per_bbl,Synthetic
+avoided_truck_rolls,6,rolls_per_month,Illustrative operator dispatches avoided,Synthetic
+truck_roll_cost,450,USD_per_roll,Illustrative fully loaded cost,Synthetic
+truck_cost_savings,2700,USD_per_month,avoided_truck_rolls*truck_roll_cost,Synthetic
+flexible_sales_volume_share,40,percent_of_baseline_oil,Illustrative volume with timing flexibility,Synthetic
+netback_uplift,1.5,USD_per_bbl,Illustrative realization improvement,Synthetic
+netback_gain,2880,USD_per_month,baseline_monthly_oil*flexible_sales_volume_share*netback_uplift,Synthetic
+drone_patrols,2,sorties_per_month,Illustrative patrol cadence,Synthetic
+drone_cost,600,USD_per_sortie,Illustrative service cost not a quote,Synthetic
+drone_patrol_cost,1200,USD_per_month,drone_patrols*drone_cost,Synthetic
+gross_modeled_value,8940,USD_per_month,recovered_oil_value+truck_cost_savings+netback_gain,Synthetic
+net_modeled_value,7740,USD_per_month,gross_modeled_value-drone_patrol_cost,Synthetic
+annualized_net_modeled_value,92880,USD_per_year,net_modeled_value*12,Synthetic
